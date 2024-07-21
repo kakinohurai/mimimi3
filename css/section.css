@@ -1,0 +1,133 @@
+/*section
+---------------------------------------------------------------------------*/
+/*フェード設定*/
+.section::before {
+	opacity: 0; /* 初期状態では非表示 */
+	transition: opacity 1s; /* 1秒かけてフェードイン/フェードアウト */
+}
+.section.active::before {
+	opacity: 1; /* フェードイン状態 */
+}
+.section.inactive::before {
+	opacity: 0; /* フェードアウト状態 */
+}
+
+/*section要素*/
+section {
+	padding: 2vw 5vw;	/*ボックス内の余白。上下、左右への順番。*/
+}
+
+/*４つのsectionブロックの共通設定*/
+#section1,#section2,#section3,#section4,#section97,#section98,#section99  {
+	min-height: calc(100dvh - 50px);	/*最低の高さ。100dvhは画面の高さ100%のこと。50pxは下のmarginの値。*/
+	margin-bottom: 50px;	/*ボックスの下に空けるスペース*/
+	padding: 5vw;			/*ボックス内の余白*/
+}
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	#section1,#section2,#section3,#section4,#section97,#section98,#section99 {
+		border-radius: 3vw 0 0 3vw;	/*角丸の指定。左上、右上、右下、左下への順番。*/
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*背景画像を置く為の設定*/
+#section1::before,#section2::before,#section3::before,#section4::before,#section97::before,#section98::before,#section99::before {
+	content: '';
+	position: fixed;z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*section1の設定*/
+#section1 {
+	background-color: rgba(146, 52, 134, 0.6);	/*背景色。３つ目までの数字はrgbでの色指定。最後の小数点は透明度。*/
+	color: #ffffff;	/*文字色*/
+}
+#section1::before {
+	background: url('../img/section1.jpg') no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+
+/*section2の設定*/
+#section2 {
+	background-color: rgba(164, 164, 182, 0.6);	/*背景色。３つ目までの数字はrgbでの色指定。最後の小数点は透明度。*/
+	color: #000000;	/*文字色*/
+}
+
+#section2::before {
+	background: url('../img/section2.jpg') no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+
+/*section3の設定*/
+#section3 {
+	background-color: rgba(100,88,79,0.6);	/*背景色。３つ目までの数字はrgbでの色指定。最後の小数点は透明度。*/
+	color: #fff;	/*文字色*/
+}
+#section3::before {
+	background: url('../img/section3.jpg') no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+
+/*section4の設定*/
+#section4 {
+	color: #fff;	/*文字色*/
+}
+#section4::before {
+	background: #59a6ba;	/*section4だけは背景画像ではなく、単に背景色だけ指定しました。*/
+}
+
+/*section98の設定*/
+#section97 {
+	background-color: rgba(153, 89, 40, 0.6);	/*背景色。３つ目までの数字はrgbでの色指定。最後の小数点は透明度。*/
+	color: #000;	/*文字色*/
+}
+#section97::before {
+	background: #59a6ba;
+}
+
+/*section98の設定*/
+#section98 {
+	background-color: rgba(153, 89, 40, 0.6);	/*背景色。３つ目までの数字はrgbでの色指定。最後の小数点は透明度。*/
+	color: #000;	/*文字色*/
+}
+#section98::before {
+	background: url('../img/header.jpg') no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+
+/*section99の設定*/
+#section99 {
+	background-color: url('../img/logo.jpg');
+	color: #000;	/*文字色*/
+}
+#section99::before {
+	background: url('../img/logo.jpg') no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+
+
+
+	/*縦向き端末から見た場合に背景画像をチェンジする*/
+	@media (orientation: portrait) {
+
+	#section1::before {
+		background-image: url('../img/section1_portrait.jpg');
+	}
+	#section2::before {
+		background-image: url('../img/section2_portrait.jpg');
+	}
+	#section3::before {
+		background-image: url('../img/section3_portrait.jpg');
+	}
+	#section98::before {
+		background-image: url('../img/header.jpg') ;
+	}
+	#section99::before {
+		background-image: url('../img/logo.jpg') ;
+	}
+
+	}/*追加指定ここまで*/
+
+/*背景色を入れない場合（画像だけを表示したい場合）*/
+.no-bgcolor {background-color: transparent !important;}

@@ -1,0 +1,82 @@
+body{
+	background-color:#000000;
+	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+	font-size:14px;
+	  background-image: url(../img/logo.jpg);
+	  background-position: center top;
+	  background-repeat: no-repeat;
+	  -webkit-background-size: cover;
+	  background-size: cover;
+	  background-attachment: fixed;
+  }
+  
+  /*---------------------------------
+	  メールフォーム
+  ---------------------------------*/
+  #formWrap{
+	  width: 100%;
+  }
+  .form_inner{
+	  width: 50%;
+	  margin: 0 auto;
+	  background-color: #FFF;
+	  min-width: 768px;
+	  padding: 25px;
+	  margin-top: 100px;
+	  margin-bottom: 100px;
+	  -webkit-border-radius:20px;
+	  -moz-border-radius: 20px;
+	  -o-border-radius: 20px;
+	  -ms-border-radius: 20px;
+	  border-radius: 20px; 
+  }
+  .form_inner h3{
+	  font-size: 24px;
+	  color: #00a0e9;
+	  border-bottom: 1px solid #00a0e9;
+	  padding-left: 6.25px;
+	  padding-bottom: 12.5px;
+	  margin-bottom: 50px;
+  }
+  .form_inner p{
+	  margin: 25px 0;
+  }
+  
+  .form_inner p a{
+	  color: #00a0e9;
+  }
+  #formWrap {
+	width:800px;
+	margin:0 auto;
+	color:#555;
+	line-height:150%;
+	font-size:85%;
+  }
+  table.formTable{
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+  }
+  table.formTable td,table.formTable th{
+	border:1px solid #ccc;
+	padding:12.5px;
+  }
+  table.formTable th{
+	widows: 40%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:right;
+  }
+  input,textarea{
+	  padding: 6.25px 12.5px;
+	  -webkit-border-radius:5px;
+	  -moz-border-radius: 5px;
+	  -o-border-radius: 5px;
+	  -ms-border-radius: 5px;
+	  border-radius: 5px;
+	  border:1px solid #CCCCCC;
+  }
+  .form_require {
+	  color: #ED1E79;
+	  font-size: 12px;
+  }
